@@ -8,14 +8,14 @@ gsap.registerPlugin(ScrollTrigger);
 export default function SmoothScroll({ children }) {
     useEffect(() => {
         const lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // standard easing
+            duration: 0.7,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
             direction: 'vertical',
             gestureDirection: 'vertical',
             smooth: true,
             mouseMultiplier: 1,
             smoothTouch: false,
-            touchMultiplier: 2,
+            touchMultiplier: 1.5,
         });
 
         // Sync GSAP ScrollTrigger with Lenis

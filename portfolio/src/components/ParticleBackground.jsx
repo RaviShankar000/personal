@@ -49,7 +49,7 @@ const ParticleBackground = () => {
 
         // Create particles
         const createParticles = () => {
-            const particleCount = Math.floor((canvas.width * canvas.height) / 15000);
+            const particleCount = Math.floor((canvas.width * canvas.height) / 25000);
             particles = [];
             for (let i = 0; i < particleCount; i++) {
                 particles.push(new Particle());
@@ -65,11 +65,10 @@ const ParticleBackground = () => {
                     const dy = particles[i].y - particles[j].y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
 
-                    if (distance < 120) {
-                        const opacity = (1 - distance / 120) * 0.15;
-                        ctx.strokeStyle = `rgba(139, 92, 246, ${opacity})`;
-                        ctx.lineWidth = 0.5;
+                    if (distance < 100) {
                         ctx.beginPath();
+                        ctx.strokeStyle = `rgba(139, 92, 246, ${1 - distance / 100})`;
+                        ctx.lineWidth = 0.5;
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.stroke();
