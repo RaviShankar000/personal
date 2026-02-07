@@ -10,7 +10,6 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Preloader from './components/Preloader';
 import SmoothScroll from './components/SmoothScroll';
-import Grain from './components/Grain';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -22,7 +21,6 @@ function App() {
       {!loading && (
         <SmoothScroll>
           <div className={`relative min-h-screen bg-slate-900 transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`}>
-            <Grain />
             <MagneticCursor />
             <Background3D />
             <div className="fixed inset-0 z-0">
