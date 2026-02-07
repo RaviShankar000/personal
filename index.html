@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">YOUR NAME</a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#contact" class="btn-contact">Let's Talk</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <canvas id="particles-canvas"></canvas>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="reveal-text">HEY, I'M</span><br>
+                    <span class="reveal-text name-highlight">YOUR NAME</span>
+                </h1>
+                <p class="hero-subtitle reveal-text">
+                    I am passionately curious, always eager to learn and explore new possibilities 
+                    in the world of tech and code.
+                </p>
+                <div class="hero-cta reveal-text">
+                    <a href="#about" class="btn-primary">Explore My Work</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-bg-shape"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- How I Can Help Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">HOW I CAN HELP YOU /</h2>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>Full-Stack Development</span>
+                    <span>•</span>
+                    <span>UI/UX Design</span>
+                    <span>•</span>
+                    <span>Problem Solving</span>
+                    <span>•</span>
+                    <span>Full-Stack Development</span>
+                    <span>•</span>
+                    <span>UI/UX Design</span>
+                    <span>•</span>
+                    <span>Problem Solving</span>
+                    <span>•</span>
+                </div>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-number">(01)</div>
+                    <h3>Full Stack Development</h3>
+                    <p>Building comprehensive web applications with modern tech stacks that are responsive, scalable and user-friendly.</p>
+                    <ul class="service-list">
+                        <li>01 MERN Stack Applications</li>
+                        <li>02 Spring Boot + React Solutions</li>
+                        <li>03 RESTful API Development</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">(02)</div>
+                    <h3>Web Design & Frontend</h3>
+                    <p>Crafting engaging user interfaces with clean code and modern design principles for exceptional user experiences.</p>
+                    <ul class="service-list">
+                        <li>01 Responsive UI Development</li>
+                        <li>02 Interactive Animations</li>
+                        <li>03 Modern CSS Implementations</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">(03)</div>
+                    <h3>Problem Solving</h3>
+                    <p>Solving complex problems with efficient algorithms and data structures to deliver optimal technical solutions.</p>
+                    <ul class="service-list">
+                        <li>01 Algorithm Optimization</li>
+                        <li>02 Technical Architecture Design</li>
+                        <li>03 Performance Enhancement</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-number">(04)</div>
+                    <h3>Project Management</h3>
+                    <p>Leading projects from conception to completion with structured approaches and collaborative workflows.</p>
+                    <ul class="service-list">
+                        <li>01 Agile Development Practices</li>
+                        <li>02 Version Control with Git</li>
+                        <li>03 CI/CD Pipeline Integration</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <blockquote class="quote">
+                <p>"Code is like poetry; it should be elegant, concise, and tell a story that others can understand."</p>
+                <cite>— My Development Philosophy</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">ABOUT ME</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>A brief intro, who am I?</h3>
+                    <p>
+                        I am a student, developer, and a passionate coder pursuing a degree in 
+                        Computer Science and Engineering. I am passionate about problem solving, 
+                        web development, and design.
+                    </p>
+                    <p>
+                        I am good at crafting solutions, critical thinking, and have a good 
+                        understanding of data structures and algorithms. I have gained experience in 
+                        full-stack web development using modern technologies like MERN stack, 
+                        React, Node.js, and more.
+                    </p>
+                    <p>
+                        I love to create, innovate, and constantly improve my skills. In my leisure 
+                        time, I like to stay updated on new technologies and explore creative pursuits.
+                    </p>
+                </div>
+                <div class="about-image">
+                    <div class="profile-image-container">
+                        <div class="profile-placeholder">
+                            <span>Your Photo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">SKILLS</h2>
+            
+            <div class="skills-category">
+                <h3>programming languages.</h3>
+                <p class="category-desc">
+                    I have a good understanding of these programming languages and am always eager 
+                    to learn new ones to meet project needs.
+                </p>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">JS</div>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">PY</div>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">JV</div>
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">C</div>
+                        <span>C/C++</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-category">
+                <h3>my tech stacks.</h3>
+                <p class="category-desc">
+                    I have gained experience in these tech stacks and am always eager to learn more.
+                </p>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">⚛️</div>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">📗</div>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🍃</div>
+                        <span>MongoDB</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">⚡</div>
+                        <span>Express</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🔷</div>
+                        <span>PostgreSQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🔥</div>
+                        <span>Firebase</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🌱</div>
+                        <span>Spring Boot</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🐙</div>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-category">
+                <h3>my toolbox.</h3>
+                <p class="category-desc">
+                    I have experience with these tools and frameworks and have used them in my projects.
+                </p>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-icon">🎨</div>
+                        <span>Figma</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">💨</div>
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">🎭</div>
+                        <span>GSAP</span>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon">✨</div>
+                        <span>UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section class="works" id="works">
+        <div class="container">
+            <h2 class="section-title">WORKS</h2>
+            <h3 class="works-subtitle">Selected Works (3)</h3>
+            <p class="works-desc">
+                Featured projects that have been meticulously crafted with passion to drive results and impact.
+            </p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Project 1</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>MERN Stack</span>
+                            <span>Full Stack</span>
+                        </div>
+                        <h4>Your Awesome Project</h4>
+                        <p>A comprehensive platform built with modern technologies for seamless user experience.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Project 2</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>API</span>
+                        </div>
+                        <h4>Another Great Project</h4>
+                        <p>An innovative solution for complex problems with elegant implementation.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">Project 3</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <h4>Impressive Application</h4>
+                        <p>Scalable and performant application with beautiful UI and smooth interactions.</p>
+                        <a href="#" class="project-link">View Project →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">EXPERIENCE</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2024 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Your Current Role</h3>
+                        <h4>Company Name</h4>
+                        <p>
+                            Description of your role, responsibilities, and achievements. Highlight the 
+                            technologies you work with and the impact you've made.
+                        </p>
+                        <div class="tech-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>AWS</span>
+                        </div>
+                        <ul class="achievements">
+                            <li>→ Key achievement or responsibility #1</li>
+                            <li>→ Key achievement or responsibility #2</li>
+                            <li>→ Key achievement or responsibility #3</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">2022 - Present</div>
+                    <div class="timeline-content">
+                        <h3>Education</h3>
+                        <h4>Your University</h4>
+                        <p>
+                            Bachelor's degree in Computer Science or related field. Focus on software 
+                            development, algorithms, and modern technologies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section class="certificates" id="certificates">
+        <div class="container">
+            <h2 class="section-title">CERTIFICATES</h2>
+            
+            <div class="certificates-grid">
+                <div class="certificate-card">
+                    <div class="cert-year">2024</div>
+                    <h3>Certification Name</h3>
+                    <p>Issuing Organization</p>
+                    <a href="#" class="cert-link">Verify Credentials →</a>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="cert-year">2024</div>
+                    <h3>Another Certification</h3>
+                    <p>Issuing Organization</p>
+                    <a href="#" class="cert-link">Verify Credentials →</a>
+                </div>
+                
+                <div class="certificate-card">
+                    <div class="cert-year">2023</div>
+                    <h3>Third Certification</h3>
+                    <p>Issuing Organization</p>
+                    <a href="#" class="cert-link">Verify Credentials →</a>
+                </div>
+            </div>
+            
+            <div class="animated-banner">
+                <div class="banner-content">
+                    <span>LEARN</span>
+                    <span>ADAPT</span>
+                    <span>THRIVE</span>
+                    <span>LEARN</span>
+                    <span>ADAPT</span>
+                    <span>THRIVE</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">GET IN TOUCH!</h2>
+            <h3 class="contact-subtitle">Let's Connect</h3>
+            <p class="contact-desc">
+                I'm always open to new opportunities, collaborations, or just a friendly chat about technology and design.
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h4>Contact</h4>
+                    <a href="mailto:your.email@example.com">your.email@example.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>Digital Spaces</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">GitHub</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                        <a href="#" target="_blank">Twitter</a>
+                        <a href="#" target="_blank">YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>Profiles</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">LeetCode</a>
+                        <a href="#" target="_blank">CodeChef</a>
+                        <a href="#" target="_blank">HackerRank</a>
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <h4>Location</h4>
+                    <p>Your City, Country</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2026 YOUR NAME · Designed and coded with ❤️</p>
+                <a href="#home" class="back-to-top">BACK TO TOP ↑</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <script src="script.js"></script>
+    <script src="advanced-animations.js"></script>
+</body>
+</html>
