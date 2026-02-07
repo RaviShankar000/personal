@@ -7,6 +7,15 @@ const Marquee = ({ text, outline = false, speed = 1, direction = 'left', classNa
 
     useEffect(() => {
         const scroller = scrollerRef.current;
+        const scrollContent = Array.from(scroller.children);
+
+        // Duplicate content to create seamless loop
+        scrollContent.forEach((item) => {
+            const clone = item.cloneNode(true);
+            clone.ariaHidden = true;
+            scroller.appendChild(clone);
+        });
+
         const totalWidth = scroller.scrollWidth / 2;
 
         gsap.to(scroller, {
@@ -14,9 +23,10 @@ const Marquee = ({ text, outline = false, speed = 1, direction = 'left', classNa
             duration: 20 / speed,
             ease: "none",
             repeat: -1,
-            modifiers: {
-                x: gsap.utils.unitize(x => parseFloat(x) % totalWidth - (direction === 'left' ? 0 : totalWidth))
-            }
+            modifier: direction === 'right' ? (x) => {
+                const xVal = parseFloat(x);
+                return `${xVal % totalWidth - totalWidth}px`;
+            } : undefined
         });
     }, [speed, direction]);
 
@@ -26,10 +36,10 @@ const Marquee = ({ text, outline = false, speed = 1, direction = 'left', classNa
             className={`relative flex overflow-hidden whitespace-nowrap py-4 ${className}`}
             style={{ maskImage: 'linear-gradient(to right, transparent, black 10%, black 90%, transparent)' }}
         >
-            <div ref={scrollerRef} className="flex gap-8 items-center w-max">
-                {[1, 2, 3, 4, 1, 2, 3, 4].map((i, index) => (
+            <div ref={scrollerRef} className="flex gap-8 items-center">
+                {[1, 2, 3, 4].map((i) => (
                     <span
-                        key={index}
+                        key={i}
                         className={`text-[8vw] md:text-[10vw] font-bold uppercase leading-none ${outline
                             ? 'text-transparent stroke-text'
                             : 'text-slate-200'
