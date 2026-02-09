@@ -91,15 +91,15 @@ export default function Contact() {
         {
             name: 'Telegram',
             icon: TelegramIcon,
-            value: '@yourusername',
-            url: 'https://t.me/yourusername',
+            value: '@ravi_31387',
+            url: 'https://t.me/ravi_31387',
             color: 'from-cyan-500 to-blue-500'
         },
         {
             name: 'Twitter',
             icon: TwitterIcon,
-            value: '@yourusername',
-            url: 'https://twitter.com/yourusername',
+            value: '@shankar_pa24834',
+            url: 'https://x.com/shankar_pa24834',
             color: 'from-sky-400 to-blue-500'
         },
         {
