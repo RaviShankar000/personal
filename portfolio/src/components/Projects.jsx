@@ -65,7 +65,7 @@ export default function Projects() {
     return (
         <section ref={sectionRef} id="projects" className="bg-[#020617] text-white overflow-hidden pb-32">
             {/* Marquee Separator */}
-            <div className="py-20 opacity-80 mix-blend-screen">
+            <div className="py-20">
                 <Marquee text="SELECTED WORKS • " speed={0.5} outline={true} direction="left" />
             </div>
 

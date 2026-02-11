@@ -45,7 +45,7 @@ const Marquee = ({ text, outline = false, speed = 1, direction = 'left', classNa
                             : 'text-slate-200'
                             }`}
                         style={outline ? {
-                            WebkitTextStroke: '1px rgba(255, 255, 255, 0.2)',
+                            WebkitTextStroke: '1px rgba(255, 255, 255, 0.5)',
                         } : {}}
                     >
                         {text}
