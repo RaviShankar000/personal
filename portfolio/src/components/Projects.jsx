@@ -13,7 +13,7 @@ const projects = [
         image: 'https://images.unsplash.com/photo-1588965353379-90b132588a50?q=80&w=2072&auto=format&fit=crop',
         description: 'Real-time grocery delivery system with live order tracking, role-based dashboards, and scalable REST APIs using React, Node.js, and MongoDB.',
         tags: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'Redux'],
-        links: { demo: '#', code: '#' }
+        links: { demo: '#', code: 'https://github.com/RaviShankar000' }
     },
     {
         id: '02',
@@ -22,7 +22,7 @@ const projects = [
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
         description: 'Predicting academic stress levels from survey data using Python, Scikit-learn, and React-based visualization dashboards.',
         tags: ['Python', 'Scikit-learn', 'React', 'MongoDB', 'Flask'],
-        links: { demo: '#', code: '#' }
+        links: { demo: '#', code: 'https://github.com/RaviShankar000' }
     },
     {
         id: '03',
@@ -31,7 +31,7 @@ const projects = [
         image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
         description: 'A modern, responsive portfolio website featuring glassmorphism, GSAP animations, and a custom dark theme.',
         tags: ['React', 'Tailwind CSS', 'GSAP', 'Vite'],
-        links: { demo: '#', code: '#' }
+        links: { demo: '#', code: 'https://github.com/RaviShankar000' }
     }
 ];
 
@@ -139,7 +139,12 @@ export default function Projects() {
                                         <a href={project.links.demo} className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-syne font-bold text-sm rounded-full transition-all duration-300 shadow-lg shadow-blue-600/20">
                                             View Project
                                         </a>
-                                        <a href={project.links.code} className="px-6 py-3 bg-transparent hover:bg-white/10 text-white border border-white/20 font-syne font-bold text-sm rounded-full transition-all duration-300">
+                                        <a
+                                            href={project.links.code}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-6 py-3 bg-transparent hover:bg-white/10 text-white border border-white/20 font-syne font-bold text-sm rounded-full transition-all duration-300"
+                                        >
                                             GitHub
                                         </a>
                                     </div>
