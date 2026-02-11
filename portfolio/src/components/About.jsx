@@ -30,16 +30,16 @@ export default function About() {
         const ctx = gsap.context(() => {
             itemsRef.current.forEach((item, index) => {
                 gsap.from(item, {
-                    y: 50,
+                    y: 30, // Reduced distance
                     opacity: 0,
-                    duration: 1,
-                    ease: 'power3.out',
+                    duration: 0.6, // Faster duration
+                    ease: 'power2.out', // Snappier ease
                     scrollTrigger: {
                         trigger: item,
-                        start: 'top 80%',
+                        start: 'top 90%', // Trigger sooner
                         toggleActions: 'play none none reverse'
                     },
-                    delay: index * 0.2
+                    delay: index * 0.1 // Reduced delay
                 });
             });
         }, sectionRef);
