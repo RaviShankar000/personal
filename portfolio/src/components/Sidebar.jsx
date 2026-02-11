@@ -60,18 +60,8 @@ const SunIcon = () => (
     </svg>
 );
 
-export default function Sidebar() {
+export default function Sidebar({ darkMode, toggleDarkMode }) {
     const [activeSection, setActiveSection] = useState('hero');
-    const [darkMode, setDarkMode] = useState(false); // Default to Light Mode (white theme)
-
-    // Sync theme with state
-    useEffect(() => {
-        if (darkMode) {
-            document.documentElement.classList.remove('light-mode');
-        } else {
-            document.documentElement.classList.add('light-mode');
-        }
-    }, [darkMode]);
 
     const navItems = [
         { id: 'hero', icon: HomeIcon, label: 'Home' },
@@ -111,9 +101,7 @@ export default function Sidebar() {
         }
     };
 
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-    };
+
 
     return (
         <aside className="hidden md:flex fixed left-0 top-0 h-screen w-20 bg-slate-900/80 backdrop-blur-xl border-r border-slate-800 z-50 flex-col items-center py-8 transition-colors duration-300">

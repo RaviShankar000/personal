@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Background3D from './components/Background3D';
@@ -14,22 +15,35 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MobileNav from './components/MobileNav';
 
-// ... other imports
-
 function App() {
+  const [darkMode, setDarkMode] = useState(false); // Default to Light Mode (white theme check)
+
+  // Sync theme with state
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.remove('light-mode');
+    } else {
+      document.documentElement.classList.add('light-mode');
+    }
+  }, [darkMode]);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className="relative min-h-screen bg-slate-950 text-white">
       {/* Custom Magnetic Cursor */}
       <MagneticCursor />
 
       {/* Left Sidebar Navigation (Desktop) */}
-      <Sidebar />
+      <Sidebar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* Bottom Navigation (Mobile) */}
       <MobileNav />
 
       {/* Fixed Top Navigation */}
-      <Navbar />
+      <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
 
       {/* Animated Background Layers */}
       <AnimatedGradient />
