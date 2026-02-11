@@ -116,7 +116,7 @@ export default function Sidebar() {
     };
 
     return (
-        <aside className="fixed left-0 top-0 h-screen w-20 bg-slate-900/80 backdrop-blur-xl border-r border-slate-800 z-50 flex flex-col items-center py-8 transition-colors duration-300">
+        <aside className="hidden md:flex fixed left-0 top-0 h-screen w-20 bg-slate-900/80 backdrop-blur-xl border-r border-slate-800 z-50 flex-col items-center py-8 transition-colors duration-300">
             {/* Logo/Brand */}
             <div className="mb-12">
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl shadow-lg">

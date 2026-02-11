@@ -43,7 +43,7 @@ export default function Achievements() {
             <div className="relative z-10 max-w-5xl mx-auto w-full">
                 {/* Header */}
                 <div className="text-center mb-20">
-                    <h2 className="font-syne text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent">
+                    <h2 className="font-syne text-[8.5vw] md:text-8xl font-black mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent tracking-tighter w-full whitespace-nowrap overflow-visible">
                         ACHIEVEMENTS
                     </h2>
                     <p className="font-manrope text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">

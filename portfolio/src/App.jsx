@@ -12,6 +12,9 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import MobileNav from './components/MobileNav';
+
+// ... other imports
 
 function App() {
   return (
@@ -19,8 +22,11 @@ function App() {
       {/* Custom Magnetic Cursor */}
       <MagneticCursor />
 
-      {/* Left Sidebar Navigation */}
+      {/* Left Sidebar Navigation (Desktop) */}
       <Sidebar />
+
+      {/* Bottom Navigation (Mobile) */}
+      <MobileNav />
 
       {/* Fixed Top Navigation */}
       <Navbar />
@@ -30,8 +36,8 @@ function App() {
       <ParticleBackground />
       <Background3D />
 
-      {/* Main content - adjusted for sidebar */}
-      <main className="relative z-10 ml-20">
+      {/* Main content - adjusted for sidebar and mobile nav */}
+      <main className="relative z-10 ml-0 md:ml-20 pb-24 md:pb-0 transition-all duration-300">
         <Hero />
         <About />
         <Education />
