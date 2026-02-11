@@ -1,6 +1,7 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import emailjs from '@emailjs/browser';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,6 +45,16 @@ const EmailIcon = () => (
 export default function Contact() {
     const sectionRef = useRef(null);
     const contentRef = useRef(null);
+    const formRef = useRef(null);
+
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -65,6 +76,59 @@ export default function Contact() {
         }, sectionRef);
         return () => ctx.revert();
     }, []);
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        try {
+            // EmailJS configuration - You'll need to replace these with your own values
+            // Get them from: https://www.emailjs.com/
+            const result = await emailjs.send(
+                'service_0nah0tn',      // Service ID
+                'template_yccqo8n',     // Template ID
+                {
+                    from_name: formData.name,
+                    from_email: formData.email,
+                    subject: formData.subject,
+                    message: formData.message,
+                    to_email: 'ravishankar82923@gmail.com'
+                },
+                'sztVtRAtkoKDXhvHi'     // Public Key
+            );
+
+            console.log('Email sent successfully:', result);
+            setSubmitStatus('success');
+
+            // Reset form
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                message: ''
+            });
+
+            // Clear success message after 5 seconds
+            setTimeout(() => setSubmitStatus(null), 5000);
+        } catch (error) {
+            console.error('Email send failed:', error);
+            setSubmitStatus('error');
+
+            // Clear error message after 5 seconds
+            setTimeout(() => setSubmitStatus(null), 5000);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     const contactMethods = [
         {
@@ -189,45 +253,78 @@ export default function Contact() {
                     {/* Right Column: Contact Form */}
                     <div>
                         <h3 className="font-syne text-2xl font-bold text-white mb-6">Send a Message</h3>
-                        <form className="space-y-4">
+
+                        {/* Success/Error Messages */}
+                        {submitStatus === 'success' && (
+                            <div className="mb-4 p-4 bg-green-500/20 border border-green-500/50 rounded-xl text-green-400 font-manrope text-sm">
+                                ✅ Message sent successfully! I'll get back to you soon.
+                            </div>
+                        )}
+                        {submitStatus === 'error' && (
+                            <div className="mb-4 p-4 bg-red-500/20 border border-red-500/50 rounded-xl text-red-400 font-manrope text-sm">
+                                ❌ Failed to send message. Please try again or email me directly.
+                            </div>
+                        )}
+
+                        <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                             {/* Name and Email Row */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <input
                                     type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleInputChange}
                                     placeholder="Your Name"
                                     className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                                     required
+                                    disabled={isSubmitting}
                                 />
                                 <input
                                     type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
                                     placeholder="Your Email"
                                     className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                                     required
+                                    disabled={isSubmitting}
                                 />
                             </div>
 
                             {/* Subject */}
                             <input
                                 type="text"
+                                name="subject"
+                                value={formData.subject}
+                                onChange={handleInputChange}
                                 placeholder="Subject"
                                 className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
                                 required
+                                disabled={isSubmitting}
                             />
 
                             {/* Message */}
                             <textarea
+                                name="message"
+                                value={formData.message}
+                                onChange={handleInputChange}
                                 placeholder="Your Message"
                                 rows="6"
                                 className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
                                 required
+                                disabled={isSubmitting}
                             ></textarea>
 
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-syne font-bold rounded-xl hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] hover:scale-105 transition-all duration-300"
+                                disabled={isSubmitting}
+                                className={`w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-syne font-bold rounded-xl transition-all duration-300 ${isSubmitting
+                                    ? 'opacity-50 cursor-not-allowed'
+                                    : 'hover:shadow-[0_0_40px_rgba(59,130,246,0.5)] hover:scale-105'
+                                    }`}
                             >
-                                Send Message 🚀
+                                {isSubmitting ? 'Sending... ⏳' : 'Send Message 🚀'}
                             </button>
                         </form>
                     </div>
