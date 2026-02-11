@@ -8,31 +8,24 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
     {
         id: '01',
-        title: 'E-Commerce Platform',
+        title: 'Q-Commerce Platform',
         category: 'Full Stack Development',
-        image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
-        description: 'A scalable online store with real-time inventory management.'
+        image: 'https://images.unsplash.com/photo-1588965353379-90b132588a50?q=80&w=2072&auto=format&fit=crop',
+        description: 'Real-time grocery delivery system with live order tracking, role-based dashboards, and scalable REST APIs using React, Node.js, and MongoDB.'
     },
     {
         id: '02',
-        title: 'Financial Dashboard',
-        category: 'UI/UX Design',
+        title: 'AI Stress Analysis System',
+        category: 'AI & Machine Learning',
         image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
-        description: 'Interactive data visualization for financial analytics.'
+        description: 'Predicting academic stress levels from survey data using Python, Scikit-learn, and React-based visualization dashboards.'
     },
     {
         id: '03',
-        title: 'Social Media App',
-        category: 'Mobile App',
-        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80',
-        description: 'Real-time social networking platform with chat features.'
-    },
-    {
-        id: '04',
-        title: 'AI Content Generator',
-        category: 'Machine Learning',
-        image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-        description: 'Generative AI tool for automating content creation.'
+        title: 'Personal Portfolio',
+        category: 'Web Development',
+        image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop',
+        description: 'A modern, responsive portfolio website featuring glassmorphism, GSAP animations, and a custom dark theme.'
     }
 ];
 
