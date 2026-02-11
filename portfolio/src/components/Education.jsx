@@ -32,12 +32,12 @@ export default function Education() {
     const educationData = [
         {
             id: 1,
-            icon: '🏫',
-            institution: 'DAV Public School',
-            degree: 'SSC, CBSE',
-            duration: 'Mar 2020 - Apr 2021',
-            grade: 'GRADE - 81.2%',
-            color: 'from-blue-500 to-cyan-500'
+            icon: '🎓',
+            institution: 'KL University',
+            degree: 'BTech CSE',
+            duration: '2023 - 2027',
+            grade: 'GRADE - 9.32 CGPA',
+            color: 'from-orange-500 to-red-500'
         },
         {
             id: 2,
@@ -50,12 +50,12 @@ export default function Education() {
         },
         {
             id: 3,
-            icon: '🎓',
-            institution: 'KL University',
-            degree: 'BTech CSE',
-            duration: '2023 - 2027',
-            grade: 'GRADE - 9.32 CGPA',
-            color: 'from-orange-500 to-red-500'
+            icon: '🏫',
+            institution: 'DAV Public School',
+            degree: 'SSC, CBSE',
+            duration: 'Mar 2020 - Apr 2021',
+            grade: 'GRADE - 81.2%',
+            color: 'from-blue-500 to-cyan-500'
         }
     ];
 
