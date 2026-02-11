@@ -8,17 +8,22 @@ const services = [
     {
         id: '01',
         title: 'Full Stack Development',
-        description: 'Building comprehensive web applications using MERN stack with focus on scalability and performance.'
+        description: 'Building scalable MERN stack applications with secure authentication, role-based dashboards, REST APIs, and real-time features.'
     },
     {
         id: '02',
-        title: 'Interactive Design',
-        description: 'Creating immersive user experiences with WebGL, Three.js, and smooth GSAP animations.'
+        title: 'Backend & System Design',
+        description: 'Designing robust backend architectures, database schemas, and optimized APIs for high-performance web applications.'
     },
     {
         id: '03',
-        title: 'System Architecture',
-        description: 'Designing robust backend systems and database structures for complex data requirements.'
+        title: 'AI & Data-Driven Applications',
+        description: 'Developing intelligent systems using Python and machine learning to analyze, predict, and generate meaningful insights from data.'
+    },
+    {
+        id: '04',
+        title: 'Problem Solving & DSA',
+        description: 'Solving algorithmic challenges using C++ and Java, with strong fundamentals in data structures and optimization.'
     }
 ];
 
