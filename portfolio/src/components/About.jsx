@@ -61,11 +61,10 @@ export default function About() {
                     {/* Left: Profile Photo */}
                     <div className="lg:col-span-5 relative group">
                         <div className="relative z-10 rounded-3xl overflow-hidden aspect-[4/5] border-2 border-white/10 shadow-2xl">
-                            <div className="absolute inset-0 bg-blue-600/10 mix-blend-overlay group-hover:bg-transparent transition-all duration-500" />
                             <img
                                 src="/profile.png"
                                 alt="Ravi Shankar Patro"
-                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-out"
+                                className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-all duration-700 ease-out"
                             />
                         </div>
                         {/* Decorative Elements */}
