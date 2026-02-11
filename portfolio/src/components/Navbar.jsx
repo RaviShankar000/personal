@@ -20,12 +20,12 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4 bg-[#020617]/80 backdrop-blur-md border-b border-white/5' : 'py-8 bg-transparent'
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'py-4 bg-[#020617]/50 backdrop-blur-xl border-b border-white/5' : 'py-8 bg-transparent'
                 }`}
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 <a href="#" className="font-syne font-bold text-2xl text-slate-100 tracking-tighter">
-                    RAVI<span className="text-blue-600">.</span>
+                    RAVI SHANKAR<span className="text-blue-600">.</span>
                 </a>
 
                 <div className="hidden md:flex items-center gap-12">
