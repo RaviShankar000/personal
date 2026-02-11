@@ -63,7 +63,7 @@ export default function About() {
                         <div className="relative z-10 rounded-3xl overflow-hidden aspect-[4/5] border-2 border-white/10 shadow-2xl">
                             <div className="absolute inset-0 bg-blue-600/10 mix-blend-overlay group-hover:bg-transparent transition-all duration-500" />
                             <img
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+                                src="/profile.png"
                                 alt="Ravi Shankar Patro"
                                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-100 group-hover:scale-105 transition-all duration-700 ease-out"
                             />
