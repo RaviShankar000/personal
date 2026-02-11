@@ -79,17 +79,17 @@ export default function Education() {
                 </div>
 
                 {/* Timeline */}
-                <div ref={timelineRef} className="relative pl-8 md:pl-0">
-                    {/* Vertical line - hidden on mobile, center on desktop */}
-                    <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-slate-700 to-transparent transform md:-translate-x-1/2" />
+                <div ref={timelineRef} className="relative">
+                    {/* Vertical line - positioned left on mobile, center on desktop */}
+                    <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-blue-500/50 to-transparent transform md:-translate-x-1/2" />
 
                     <div className="space-y-12">
                         {educationData.map((edu, index) => (
-                            <div key={edu.id} className={`relative flex flex-col md:flex-row gap-8 items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                            <div key={edu.id} className={`relative flex flex-col md:flex-row gap-8 items-center ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} ml-10 md:ml-0`}>
 
                                 {/* Timeline Dot */}
-                                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-[#020617] border-2 border-slate-500 rounded-full transform -translate-x-1/2 z-20 group-hover:border-blue-500 transition-colors duration-300 shadow-[0_0_10px_rgba(0,0,0,1)]">
-                                    <div className={`absolute inset-0 m-auto w-1.5 h-1.5 rounded-full bg-gradient-to-r ${edu.color}`} />
+                                <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-[#020617] border-2 border-blue-500 rounded-full transform -translate-x-1/2 z-20 transition-colors duration-300 shadow-[0_0_10px_rgba(59,130,246,0.5)] flex items-center justify-center">
+                                    <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${edu.color}`} />
                                 </div>
 
                                 {/* Content Spacer for Desktop Alternating Layout */}
