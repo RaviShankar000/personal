@@ -7,6 +7,16 @@ const Footer = () => {
                 <p>
                     © 2026 Ravi Shankar. Licensed under the MIT License.
                 </p>
+
+                <a
+                    href="#" // TODO: Replace with resume link
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="my-4 md:my-0 px-4 py-2 border border-blue-500/20 rounded-full text-blue-400 hover:bg-blue-500/10 hover:border-blue-500/40 transition-all font-syne font-bold"
+                >
+                    Download Resume
+                </a>
+
                 <div className="flex items-center gap-1 mt-2 md:mt-0">
                     <span>Designed & Built with</span>
                     <span className="text-red-500">❤️</span>

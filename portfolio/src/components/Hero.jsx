@@ -135,21 +135,31 @@ export default function Hero() {
                 </div>
 
                 {/* CTA Button with 3D Hover */}
-                <div ref={ctaRef}>
+                {/* CTA Buttons with 3D Hover */}
+                <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
                     <a
                         href="#projects"
-                        className="group relative inline-flex items-center gap-3 px-10 py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-syne font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-110 hover:shadow-[0_0_50px_rgba(59,130,246,0.8)]"
+                        className="group relative inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-syne font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(59,130,246,0.6)]"
                     >
                         <span className="relative z-10">Explore My Work</span>
-                        <svg className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                         </svg>
-
-                        {/* Animated gradient overlay */}
                         <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                        {/* Shine effect */}
                         <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12" />
+                    </a>
+
+                    <a
+                        href="#" // TODO: Replace with resume link
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-transparent border border-blue-500/30 text-blue-300 font-syne font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:border-blue-400 hover:bg-blue-500/10 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]"
+                    >
+                        <span className="relative z-10">Download Resume</span>
+                        <svg className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent skew-x-12" />
                     </a>
                 </div>
             </div>
