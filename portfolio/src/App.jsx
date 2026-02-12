@@ -17,6 +17,7 @@ import ScrollProgress from './components/ScrollProgress';
 const Education = lazy(() => import('./components/Education'));
 const Achievements = lazy(() => import('./components/Achievements'));
 const Skills = lazy(() => import('./components/Skills'));
+const CodingProfiles = lazy(() => import('./components/CodingProfiles'));
 const Projects = lazy(() => import('./components/Projects'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
@@ -72,6 +73,7 @@ function App() {
           <Education />
           <Achievements />
           <Skills />
+          <CodingProfiles />
           <Projects />
           <Contact />
           <Footer />
