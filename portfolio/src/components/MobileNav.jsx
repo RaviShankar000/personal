@@ -89,30 +89,33 @@ export default function MobileNav() {
 
     return (
         <div className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 md:hidden">
-            <nav className="bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg shadow-black/50 overflow-x-auto">
-                <div className="flex items-center justify-between p-2 min-w-max mx-auto">
+            <nav className="bg-slate-900/90 backdrop-blur-xl border border-white/10 rounded-2xl shadow-lg shadow-black/50 overflow-hidden">
+                <div className="flex items-center justify-between px-2 py-2 w-full max-w-md mx-auto">
                     {navItems.map((item) => {
                         const Icon = item.icon;
                         const isActive = activeSection === item.id;
+
+                        if (item.id === 'hero') return null; // Don't render Home on mobile to save space
+
                         return (
                             <button
                                 key={item.id}
                                 onClick={() => scrollToSection(item.id)}
-                                className={`relative flex flex-col items-center justify-center w-14 h-14 rounded-xl transition-all duration-300 ${isActive
+                                className={`relative flex flex-col items-center justify-center flex-1 h-14 rounded-xl transition-all duration-300 group ${isActive
                                     ? 'text-blue-500'
-                                    : 'text-slate-400 hover:text-white'
-                                    } ${item.id === 'hero' ? 'hidden md:block' : ''}`}
+                                    : 'text-slate-400'
+                                    }`}
                             >
-                                <div className={`p-2 rounded-lg transition-all duration-300 ${isActive ? 'bg-blue-500/10' : 'bg-transparent'}`}>
+                                <div className={`p-1.5 rounded-lg transition-all duration-300 ${isActive ? 'bg-blue-500/10 translate-y-[-2px]' : 'bg-transparent group-active:scale-95'}`}>
                                     <Icon />
                                 </div>
-                                <span className={`text-[10px] mt-1 font-medium transition-colors ${isActive ? 'text-blue-500' : 'text-slate-500'}`}>
+                                <span className={`text-[10px] font-medium transition-all duration-300 ${isActive ? 'text-blue-500 opacity-100' : 'text-slate-500 opacity-70 scale-90'}`}>
                                     {item.label}
                                 </span>
 
                                 {/* Active Indicator Dot */}
                                 {isActive && (
-                                    <span className="absolute top-2 right-2 w-1.5 h-1.5 bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
+                                    <span className="absolute top-1.5 right-1.5 w-1 h-1 bg-blue-500 rounded-full shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
                                 )}
                             </button>
                         );

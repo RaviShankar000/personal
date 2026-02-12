@@ -160,7 +160,7 @@ export default function Projects() {
                                 <div className={`flex flex-col lg:flex-row gap-8 lg:gap-16 p-6 lg:p-12 ${i % 2 === 1 && !isExpanded ? 'lg:flex-row-reverse' : ''}`}>
 
                                     {/* Image */}
-                                    <div className="lg:w-1/2 relative aspect-video rounded-xl overflow-hidden border border-white/5 bg-slate-950">
+                                    <div className="lg:w-1/2 relative aspect-video lg:aspect-auto lg:h-auto rounded-xl overflow-hidden border border-white/5 bg-slate-950">
                                         <div className="absolute inset-0 bg-blue-600/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-all duration-500" />
                                         <img
                                             src={project.image}
@@ -171,22 +171,22 @@ export default function Projects() {
 
                                     {/* Summary Info */}
                                     <div className="lg:w-1/2 flex flex-col justify-center">
-                                        <div className="flex items-center gap-4 mb-6">
+                                        <div className="flex items-center gap-4 mb-4 lg:mb-6">
                                             <span className="font-syne text-blue-500 text-lg font-bold">Project {project.id}</span>
                                             <span className="px-3 py-1 text-xs font-manrope uppercase tracking-wider text-slate-400 border border-slate-700 rounded-full">
                                                 {project.category}
                                             </span>
                                         </div>
 
-                                        <h3 className="font-syne text-3xl md:text-4xl font-bold text-slate-100 mb-6 group-hover:text-blue-400 transition-colors">
+                                        <h3 className="font-syne text-2xl sm:text-3xl md:text-4xl font-bold text-slate-100 mb-4 lg:mb-6 group-hover:text-blue-400 transition-colors">
                                             {project.title}
                                         </h3>
 
-                                        <p className="font-manrope text-slate-400 text-base leading-relaxed mb-8">
+                                        <p className="font-manrope text-slate-400 text-sm sm:text-base leading-relaxed mb-6 lg:mb-8">
                                             {project.overview}
                                         </p>
 
-                                        <div className="flex flex-wrap gap-2 mb-8">
+                                        <div className="flex flex-wrap gap-2 mb-6 lg:mb-8">
                                             {project.tags.map(tag => (
                                                 <span key={tag} className="text-xs font-manrope text-slate-500 bg-slate-800/50 px-2 py-1 rounded">
                                                     {tag}
@@ -194,7 +194,7 @@ export default function Projects() {
                                             ))}
                                         </div>
 
-                                        <div className="flex items-center gap-6">
+                                        <div className="flex flex-wrap items-center gap-4 sm:gap-6">
                                             <button
                                                 onClick={() => toggleExpand(project.id)}
                                                 className="flex items-center gap-2 text-white font-syne font-bold text-sm hover:text-blue-400 transition-colors"
@@ -203,7 +203,7 @@ export default function Projects() {
                                                 <span className={`text-xl transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}>↓</span>
                                             </button>
 
-                                            <div className="h-4 w-px bg-slate-700" />
+                                            <div className="hidden sm:block h-4 w-px bg-slate-700" />
 
                                             {/* Live Demo Link */}
                                             <a
@@ -216,7 +216,7 @@ export default function Projects() {
                                                 Live Demo
                                             </a>
 
-                                            <div className="h-4 w-px bg-slate-700" />
+                                            <div className="hidden sm:block h-4 w-px bg-slate-700" />
 
                                             <div className="flex gap-4">
                                                 <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">

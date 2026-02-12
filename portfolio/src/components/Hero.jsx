@@ -97,17 +97,17 @@ export default function Hero() {
             <div className="relative z-10 w-full max-w-7xl mx-auto px-6 text-center">
 
                 {/* Main Heading with 3D Effect */}
-                <div ref={textRef} className="mb-8 perspective-1000">
-                    <h1 className="font-syne text-[clamp(3rem,12vw,10rem)] font-black leading-[0.85] tracking-tighter mb-4">
+                <div ref={textRef} className="mb-8 perspective-1000 flex flex-col items-center">
+                    <h1 className="font-syne text-[3.5rem] sm:text-7xl md:text-[clamp(3rem,10vw,10rem)] font-black leading-[0.9] md:leading-[0.85] tracking-tighter mb-2 md:mb-4">
                         <span className="inline-block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x">
                             RAVI
                         </span>
                     </h1>
-                    <h1 className="font-syne text-[clamp(3rem,12vw,10rem)] font-black leading-[0.85] tracking-tighter">
+                    <h1 className="font-syne text-[3.5rem] sm:text-7xl md:text-[clamp(3rem,10vw,10rem)] font-black leading-[0.9] md:leading-[0.85] tracking-tighter">
                         <span className="inline-block text-transparent"
                             style={{
-                                WebkitTextStroke: '2px rgba(255, 255, 255, 0.8)',
-                                textShadow: '0 0 40px rgba(59, 130, 246, 0.5)'
+                                WebkitTextStroke: '1px rgba(255, 255, 255, 0.8)',
+                                textShadow: '0 0 30px rgba(59, 130, 246, 0.4)'
                             }}>
                             SHANKAR
                         </span>
@@ -115,31 +115,30 @@ export default function Hero() {
                 </div>
 
                 {/* Subtitle with Glitch Effect */}
-                <div ref={subRef} className="space-y-6 mb-12">
-                    <p className="font-manrope text-xl md:text-2xl text-blue-300/90 tracking-[0.3em] uppercase font-light relative">
-                        <span className="relative inline-block">
+                <div ref={subRef} className="space-y-6 mb-12 px-4">
+                    <div className="font-manrope text-lg md:text-2xl text-blue-300/90 tracking-[0.2em] md:tracking-[0.3em] uppercase font-light relative flex flex-col md:flex-row items-center justify-center gap-2 md:gap-0">
+                        <span className="relative inline-block whitespace-nowrap">
                             Full Stack Engineer
                             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/20 to-transparent animate-shimmer" />
                         </span>
-                        <span className="mx-4 text-blue-500/50">|</span>
-                        <span className="relative inline-block">
+                        <span className="hidden md:inline mx-4 text-blue-500/50">|</span>
+                        <span className="relative inline-block whitespace-nowrap">
                             Backend Architecture
                             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400/20 to-transparent animate-shimmer"
                                 style={{ animationDelay: '0.5s' }} />
                         </span>
-                    </p>
+                    </div>
 
-                    <p className="font-manrope text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
+                    <p className="font-manrope text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed px-2">
                         Building scalable, production-grade web systems with a focus on high-performance APIs and distributed architecture.
                     </p>
                 </div>
 
-                {/* CTA Button with 3D Hover */}
                 {/* CTA Buttons with 3D Hover */}
-                <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-8">
+                <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-8 w-full max-w-md mx-auto sm:max-w-none">
                     <a
                         href="#projects"
-                        className="group relative inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-syne font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(59,130,246,0.6)]"
+                        className="group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 sm:py-5 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-syne font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(59,130,246,0.6)]"
                     >
                         <span className="relative z-10">Explore My Work</span>
                         <svg className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -153,7 +152,7 @@ export default function Hero() {
                         href="#" // TODO: Replace with resume link
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group relative inline-flex items-center gap-3 px-8 sm:px-10 py-4 sm:py-5 bg-transparent border border-blue-500/30 text-blue-300 font-syne font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:border-blue-400 hover:bg-blue-500/10 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]"
+                        className="group relative inline-flex items-center justify-center gap-3 w-full sm:w-auto px-8 py-4 sm:py-5 bg-transparent border border-blue-500/30 text-blue-300 font-syne font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:border-blue-400 hover:bg-blue-500/10 hover:shadow-[0_0_30px_rgba(59,130,246,0.2)]"
                     >
                         <span className="relative z-10">Download Resume</span>
                         <svg className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-y-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
