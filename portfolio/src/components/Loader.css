@@ -1,0 +1,54 @@
+@keyframes tap {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.animate-tap-1 {
+    animation: tap 0.8s ease-in-out infinite 0s;
+    transform-box: fill-box;
+    transform-origin: center bottom;
+}
+
+.animate-tap-2 {
+    animation: tap 0.8s ease-in-out infinite 0.1s;
+    transform-box: fill-box;
+    transform-origin: center bottom;
+}
+
+.animate-tap-3 {
+    animation: tap 0.8s ease-in-out infinite 0.2s;
+    transform-box: fill-box;
+    transform-origin: center bottom;
+}
+
+.animate-tap-4 {
+    animation: tap 0.8s ease-in-out infinite 0.3s;
+    transform-box: fill-box;
+    transform-origin: center bottom;
+}
+
+@keyframes gradient-x {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 3s ease infinite;
+}

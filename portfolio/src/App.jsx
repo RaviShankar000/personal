@@ -13,10 +13,13 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Loader from './components/Loader';
 import MobileNav from './components/MobileNav';
+import { useLoading } from './context/LoadingContext';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false); // Default to Light Mode (white theme check)
+  const { isLoading } = useLoading();
 
   // Sync theme with state
   useEffect(() => {
@@ -33,6 +36,9 @@ function App() {
 
   return (
     <div className="relative min-h-screen bg-slate-950 text-white">
+      {/* Loading Screen */}
+      <Loader loading={isLoading} />
+
       {/* Custom Magnetic Cursor */}
       <MagneticCursor />
 
