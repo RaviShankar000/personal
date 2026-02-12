@@ -262,7 +262,6 @@ h6 {
 .light-mode #contact,
 .light-mode #skills,
 .light-mode #works,
-.light-mode #projects,
 .light-mode section[id] {
   background: var(--bg-primary) !important;
   background-image: none !important;
@@ -270,9 +269,10 @@ h6 {
 }
 
 /* Projects 'Creation' Text Stroke */
-.light-mode #projects h2 span[style*="WebkitTextStroke"] {
+.light-mode #works h2 span[style*="WebkitTextStroke"] {
   -webkit-text-stroke: 1px var(--text-primary) !important;
   color: transparent !important;
+  text-shadow: none !important;
 }
 
 /* Light Mode Marquee Stroke Fix */

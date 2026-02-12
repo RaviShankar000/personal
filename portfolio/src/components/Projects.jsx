@@ -125,7 +125,7 @@ export default function Projects() {
     };
 
     return (
-        <section ref={sectionRef} id="projects" className="bg-[#020617] text-white overflow-hidden pb-32">
+        <section ref={sectionRef} id="works" className="bg-[#020617] text-white overflow-hidden pb-32">
             <div className="py-20">
                 <Marquee text="SELECTED WORKS • ENGINEERING • " speed={0.5} outline={true} direction="left" />
             </div>
