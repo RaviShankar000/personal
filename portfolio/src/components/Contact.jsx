@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import emailjs from '@emailjs/browser';
+import { useLoading } from '../context/LoadingContext';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -43,6 +44,7 @@ const EmailIcon = () => (
 );
 
 export default function Contact() {
+    const { startLoading, stopLoading } = useLoading();
     const sectionRef = useRef(null);
     const contentRef = useRef(null);
     const formRef = useRef(null);
@@ -88,6 +90,7 @@ export default function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
+        startLoading(); // Trigger global loader
         setSubmitStatus(null);
 
         try {
@@ -127,6 +130,7 @@ export default function Contact() {
             setTimeout(() => setSubmitStatus(null), 5000);
         } finally {
             setIsSubmitting(false);
+            stopLoading(); // Stop global loader
         }
     };
 

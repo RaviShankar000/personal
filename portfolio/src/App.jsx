@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
 import Background3D from './components/Background3D';
@@ -7,15 +7,18 @@ import AnimatedGradient from './components/AnimatedGradient';
 import MagneticCursor from './components/MagneticCursor';
 import Hero from './components/Hero';
 import About from './components/About';
-import Education from './components/Education';
-import Achievements from './components/Achievements';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
 import Loader from './components/Loader';
 import MobileNav from './components/MobileNav';
 import { useLoading } from './context/LoadingContext';
+import DelayedLoader from './components/DelayedLoader';
+
+// Lazy Load Heavy Components
+const Education = lazy(() => import('./components/Education'));
+const Achievements = lazy(() => import('./components/Achievements'));
+const Skills = lazy(() => import('./components/Skills'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   const [darkMode, setDarkMode] = useState(false); // Default to Light Mode (white theme check)
@@ -60,12 +63,15 @@ function App() {
       <main className="relative z-10 ml-0 md:ml-20 pb-24 md:pb-0 transition-all duration-300">
         <Hero />
         <About />
-        <Education />
-        <Achievements />
-        <Skills />
-        <Projects />
-        <Contact />
-        <Footer />
+
+        <Suspense fallback={<DelayedLoader />}>
+          <Education />
+          <Achievements />
+          <Skills />
+          <Projects />
+          <Contact />
+          <Footer />
+        </Suspense>
       </main>
     </div>
   );
