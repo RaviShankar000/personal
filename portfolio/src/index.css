@@ -261,6 +261,7 @@ h6 {
 .light-mode #achievements,
 .light-mode #contact,
 .light-mode #skills,
+.light-mode #coding-profiles,
 .light-mode #works,
 .light-mode section[id] {
   background: var(--bg-primary) !important;

@@ -100,7 +100,7 @@ export default function CodingProfiles() {
                     <p className="font-manrope text-sm tracking-[0.2em] text-blue-500 mb-4 uppercase">
                         Digital Footprint
                     </p>
-                    <h2 className="block w-fit mx-auto font-syne text-[clamp(2rem,5vw,5rem)] font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent whitespace-nowrap px-4">
+                    <h2 className="block w-fit mx-auto font-syne text-[clamp(1.2rem,2.8vw,4.5rem)] font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight whitespace-nowrap px-4">
                         Coding Profiles
                     </h2>
                     <p className="font-manrope text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
