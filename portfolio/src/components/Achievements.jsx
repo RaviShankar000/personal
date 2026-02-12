@@ -42,8 +42,8 @@ export default function Achievements() {
 
             <div className="relative z-10 max-w-5xl mx-auto w-full">
                 {/* Header */}
-                <div className="text-center mb-20 px-2">
-                    <h2 className="font-syne text-[clamp(1.5rem,4.5vw,6rem)] font-black mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent tracking-tighter w-full whitespace-nowrap overflow-visible">
+                <div className="text-center mb-20">
+                    <h2 className="block w-fit mx-auto font-syne text-[clamp(1.5rem,3.5vw,6rem)] font-black mb-6 bg-gradient-to-r from-yellow-400 via-orange-400 to-pink-400 bg-clip-text text-transparent tracking-tight whitespace-nowrap px-4">
                         ACHIEVEMENTS
                     </h2>
                     <p className="font-manrope text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">

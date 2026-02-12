@@ -117,9 +117,8 @@ export default function Skills() {
             <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
 
             <div className="relative z-10 max-w-7xl mx-auto w-full">
-                {/* Header */}
-                <div className="text-center mb-20 px-2">
-                    <h2 className="font-syne text-[clamp(1.5rem,2.5vw,5rem)] font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent whitespace-nowrap overflow-visible">
+                <div className="text-center mb-20 px-4">
+                    <h2 className="block w-fit mx-auto font-syne text-[clamp(1.5rem,2.2vw,5rem)] font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight whitespace-nowrap px-4">
                         Skills & Technologies
                     </h2>
                     <p className="font-manrope text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
