@@ -69,12 +69,12 @@ const MagneticCursor = () => {
         <>
             <div
                 ref={cursorRef}
-                className="fixed w-3 h-3 bg-purple-500 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+                className="hidden md:block fixed w-3 h-3 bg-purple-500 rounded-full pointer-events-none z-[9999] mix-blend-difference"
                 style={{ transform: 'translate(-50%, -50%)' }}
             />
             <div
                 ref={followerRef}
-                className="fixed w-8 h-8 border-2 border-purple-400 rounded-full pointer-events-none z-[9998] mix-blend-difference"
+                className="hidden md:block fixed w-8 h-8 border-2 border-purple-400 rounded-full pointer-events-none z-[9998] mix-blend-difference"
                 style={{ transform: 'translate(-50%, -50%)' }}
             />
         </>
