@@ -11,6 +11,7 @@ import Loader from './components/Loader';
 import MobileNav from './components/MobileNav';
 import { useLoading } from './context/LoadingContext';
 import DelayedLoader from './components/DelayedLoader';
+import ScrollProgress from './components/ScrollProgress';
 
 // Lazy Load Heavy Components
 const Education = lazy(() => import('./components/Education'));
@@ -41,6 +42,9 @@ function App() {
     <div className="relative min-h-screen bg-slate-950 text-white">
       {/* Loading Screen */}
       <Loader loading={isLoading} />
+
+      {/* Scroll Progress Bar */}
+      <ScrollProgress />
 
       {/* Custom Magnetic Cursor */}
       <MagneticCursor />
