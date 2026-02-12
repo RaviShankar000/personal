@@ -98,12 +98,12 @@ export default function Hero() {
 
                 {/* Main Heading with 3D Effect */}
                 <div ref={textRef} className="mb-8 perspective-1000 flex flex-col items-center">
-                    <h1 className="font-syne text-[3.5rem] sm:text-7xl md:text-[clamp(3rem,10vw,10rem)] font-black leading-[0.9] md:leading-[0.85] tracking-tighter mb-2 md:mb-4">
+                    <h1 className="font-syne text-[clamp(3.5rem,15vw,6rem)] sm:text-7xl md:text-[clamp(4rem,10vw,10rem)] font-black leading-[0.9] md:leading-[0.85] tracking-tighter mb-2 md:mb-4">
                         <span className="inline-block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-gradient-x">
                             RAVI
                         </span>
                     </h1>
-                    <h1 className="font-syne text-[3.5rem] sm:text-7xl md:text-[clamp(3rem,10vw,10rem)] font-black leading-[0.9] md:leading-[0.85] tracking-tighter">
+                    <h1 className="font-syne text-[clamp(3.5rem,15vw,6rem)] sm:text-7xl md:text-[clamp(4rem,10vw,10rem)] font-black leading-[0.9] md:leading-[0.85] tracking-tighter">
                         <span className="inline-block text-transparent"
                             style={{
                                 WebkitTextStroke: '1px rgba(255, 255, 255, 0.8)',

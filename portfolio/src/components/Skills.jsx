@@ -118,8 +118,8 @@ export default function Skills() {
 
             <div className="relative z-10 max-w-7xl mx-auto w-full">
                 {/* Header */}
-                <div className="text-center mb-20">
-                    <h2 className="font-syne text-6xl md:text-8xl font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                <div className="text-center mb-20 px-2">
+                    <h2 className="font-syne text-[clamp(2.5rem,8vw,5rem)] md:text-8xl font-black mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent break-words">
                         Skills & Technologies
                     </h2>
                     <p className="font-manrope text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
