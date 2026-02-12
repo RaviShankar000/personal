@@ -87,15 +87,16 @@ export default function About() {
                             </h2>
                         </div>
 
+
                         <div className="font-manrope text-slate-400 text-lg leading-relaxed space-y-6">
                             <p>
-                                I’m <strong className="text-white">Ravi Shankar Patro</strong>, a Computer Science undergraduate at Koneru Lakshmaiah University (GPA: 9.33). I specialize in developing secure, scalable, and user-focused web applications using React, Node.js, and modern database systems.
+                                I am <strong className="text-white">Ravi Shankar Patro</strong>, a final-year Computer Science undergraduate (GPA: 9.33) at Koneru Lakshmaiah University, driven by engineering scalable, production-grade applications. My expertise lies in architecting full-stack solutions with React, Node.js, and advanced database management.
                             </p>
                             <p>
-                                I have hands-on experience building real-time systems like a multi-role Q-Commerce platform with live order tracking and scalable REST APIs. With a strong foundation in Data Structures, OOP, DBMS, and backend architecture, I focus on writing clean, maintainable code that performs efficiently in real-world environments.
+                                Beyond academics, I have built complex, real-time systems—including a high-performance Q-Commerce platform with live tracking. I focus on backend optimization, secure API design, and writing clean, maintainable code that solves tangible problems.
                             </p>
-                            <p>
-                                Currently preparing for software development roles where I can contribute to building production-ready systems and scalable backend services.
+                            <p className="text-blue-400 font-medium">
+                                Actively preparing for Software Development roles to leverage my skills in building robust enterprise systems.
                             </p>
                         </div>
 
