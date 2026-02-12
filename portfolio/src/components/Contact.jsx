@@ -330,15 +330,7 @@ export default function Contact() {
                     </div>
                 </div>
 
-                {/* Footer */}
-                <div className="mt-32 pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 text-sm font-manrope">
-                    <p>© 2026 Ravi Shankar. All rights reserved.</p>
-                    <p className="flex items-center gap-2">
-                        Designed & Built with
-                        <span className="text-red-500 animate-pulse">❤️</span>
-                        using React
-                    </p>
-                </div>
+
             </div>
         </section>
     );
