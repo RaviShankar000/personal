@@ -55,8 +55,9 @@ export default function Contact() {
         subject: '',
         message: ''
     });
+    const [validationErrors, setValidationErrors] = useState({});
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+    const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or 'validation'
 
     useEffect(() => {
         const ctx = gsap.context(() => {
@@ -85,10 +86,39 @@ export default function Contact() {
             ...prev,
             [name]: value
         }));
+        // Clear error when user types
+        if (validationErrors[name]) {
+            setValidationErrors(prev => ({ ...prev, [name]: '' }));
+        }
+    };
+
+    const validateForm = () => {
+        const errors = {};
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!formData.name.trim()) errors.name = 'Name is required';
+        if (!formData.email.trim()) {
+            errors.email = 'Email is required';
+        } else if (!emailRegex.test(formData.email)) {
+            errors.email = 'Invalid email';
+        }
+        if (!formData.subject.trim()) errors.subject = 'Subject is required';
+        if (!formData.message.trim()) errors.message = 'Message is required';
+
+        return errors;
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const errors = validateForm();
+        if (Object.keys(errors).length > 0) {
+            setValidationErrors(errors);
+            setSubmitStatus('validation');
+            setTimeout(() => setSubmitStatus(null), 3000);
+            return;
+        }
+
         setIsSubmitting(true);
         startLoading(); // Trigger global loader
         setSubmitStatus(null);
@@ -270,6 +300,12 @@ export default function Contact() {
                             </div>
                         )}
 
+                        {submitStatus === 'validation' && (
+                            <div className="mb-4 p-4 bg-yellow-500/20 border border-yellow-500/50 rounded-xl text-yellow-400 font-manrope text-sm">
+                                ⚠️ Please correct the highlighted errors before sending.
+                            </div>
+                        )}
+
                         <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
                             {/* Name and Email Row */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -279,7 +315,7 @@ export default function Contact() {
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     placeholder="Your Name"
-                                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                                    className={`w-full px-4 py-3 bg-slate-800/50 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 transition-all duration-300 ${validationErrors.name ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : 'border-slate-700 focus:border-blue-500 focus:ring-blue-500/20'}`}
                                     required
                                     disabled={isSubmitting}
                                 />
@@ -289,7 +325,7 @@ export default function Contact() {
                                     value={formData.email}
                                     onChange={handleInputChange}
                                     placeholder="Your Email"
-                                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                                    className={`w-full px-4 py-3 bg-slate-800/50 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 transition-all duration-300 ${validationErrors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : 'border-slate-700 focus:border-blue-500 focus:ring-blue-500/20'}`}
                                     required
                                     disabled={isSubmitting}
                                 />
@@ -302,7 +338,7 @@ export default function Contact() {
                                 value={formData.subject}
                                 onChange={handleInputChange}
                                 placeholder="Subject"
-                                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300"
+                                className={`w-full px-4 py-3 bg-slate-800/50 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 transition-all duration-300 ${validationErrors.subject ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : 'border-slate-700 focus:border-blue-500 focus:ring-blue-500/20'}`}
                                 required
                                 disabled={isSubmitting}
                             />
@@ -314,7 +350,7 @@ export default function Contact() {
                                 onChange={handleInputChange}
                                 placeholder="Your Message"
                                 rows="6"
-                                className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-300 resize-none"
+                                className={`w-full px-4 py-3 bg-slate-800/50 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 transition-all duration-300 resize-none ${validationErrors.message ? 'border-red-500 focus:border-red-500 focus:ring-red-500/20' : 'border-slate-700 focus:border-blue-500 focus:ring-blue-500/20'}`}
                                 required
                                 disabled={isSubmitting}
                             ></textarea>
