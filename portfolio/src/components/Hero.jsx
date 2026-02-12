@@ -118,19 +118,19 @@ export default function Hero() {
                 <div ref={subRef} className="space-y-6 mb-12">
                     <p className="font-manrope text-xl md:text-2xl text-blue-300/90 tracking-[0.3em] uppercase font-light relative">
                         <span className="relative inline-block">
-                            Full Stack Developer
+                            Full Stack Engineer
                             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-400/20 to-transparent animate-shimmer" />
                         </span>
-                        <span className="mx-4 text-blue-500/50">×</span>
+                        <span className="mx-4 text-blue-500/50">|</span>
                         <span className="relative inline-block">
-                            Creative Coder
+                            Backend Architecture
                             <span className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-400/20 to-transparent animate-shimmer"
                                 style={{ animationDelay: '0.5s' }} />
                         </span>
                     </p>
 
                     <p className="font-manrope text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                        Crafting immersive digital experiences with cutting-edge technology and bold creativity
+                        Building scalable, production-grade web systems with a focus on high-performance APIs and distributed architecture.
                     </p>
                 </div>
 
