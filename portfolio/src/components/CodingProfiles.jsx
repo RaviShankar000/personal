@@ -8,7 +8,7 @@ const profiles = [
     {
         platform: 'GitHub',
         username: 'RaviShankar000',
-        stats: '50+Repositories | Active Contributor',
+        stats: '50+ Repositories | Active Contributor',
         link: 'https://github.com/RaviShankar000',
         color: 'from-slate-700 to-slate-900',
         glowColor: 'group-hover:shadow-[0_0_30px_rgba(255,255,255,0.15)]',
@@ -19,10 +19,23 @@ const profiles = [
         )
     },
     {
+        platform: 'LinkedIn',
+        username: 'ravi-shankar-7670962ab',
+        stats: 'Professional Network | Open to Work',
+        link: 'https://www.linkedin.com/in/ravi-shankar-7670962ab/',
+        color: 'from-blue-600 to-blue-800',
+        glowColor: 'group-hover:shadow-[0_0_30px_rgba(37,99,235,0.25)]',
+        icon: (
+            <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+        )
+    },
+    {
         platform: 'LeetCode',
-        username: 'RaviShankar000',
+        username: '6eoSbxJLjw',
         stats: '200+ Problems Solved',
-        link: 'https://leetcode.com/u/RaviShankar000/',
+        link: 'https://leetcode.com/u/6eoSbxJLjw/',
         color: 'from-orange-400 to-yellow-600',
         glowColor: 'group-hover:shadow-[0_0_30px_rgba(245,158,11,0.25)]',
         icon: (
@@ -33,9 +46,9 @@ const profiles = [
     },
     {
         platform: 'Codeforces',
-        username: 'RaviShankar000',
+        username: 'ravishankar82923',
         stats: '900+ Rating',
-        link: '#', // TODO: Replace with actual profile links
+        link: 'https://codeforces.com/profile/ravishankar82923',
         color: 'from-blue-400 to-blue-600',
         glowColor: 'group-hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]',
         icon: (
@@ -46,11 +59,11 @@ const profiles = [
     },
     {
         platform: 'CodeChef',
-        username: 'RaviShankar000',
+        username: 'ravi_patro',
         stats: '2★ | 150+ Problems Solved',
-        link: '#', // TODO: Replace with actual profile links
+        link: 'https://www.codechef.com/users/ravi_patro',
         color: 'from-amber-700 to-amber-900',
-        glowColor: 'group-hover:shadow-[0_0_30_rgba(180,83,9,0.25)]',
+        glowColor: 'group-hover:shadow-[0_0_30px_rgba(180,83,9,0.25)]',
         icon: (
             <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M21 4.5v15c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2v-15c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2zM9 13l-4 4h14l-4-4H9z" />
