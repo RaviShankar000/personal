@@ -101,7 +101,7 @@ export default function MobileNav() {
                                 className={`relative flex flex-col items-center justify-center w-14 h-14 rounded-xl transition-all duration-300 ${isActive
                                     ? 'text-blue-500'
                                     : 'text-slate-400 hover:text-white'
-                                    }`}
+                                    } ${item.id === 'hero' ? 'hidden md:block' : ''}`}
                             >
                                 <div className={`p-2 rounded-lg transition-all duration-300 ${isActive ? 'bg-blue-500/10' : 'bg-transparent'}`}>
                                     <Icon />
