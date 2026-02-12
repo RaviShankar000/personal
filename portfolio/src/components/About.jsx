@@ -102,8 +102,8 @@ export default function About() {
                         {/* Buttons & Socials */}
                         <div className="flex flex-wrap items-center gap-6 pt-4">
                             <a
-                                href="/resume.pdf"
-                                target="_blank"
+                                href="/image.png"
+                                download="Ravi_Shankar_CV.png"
                                 className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-syne font-bold text-sm rounded-full transition-all duration-300 shadow-lg shadow-blue-600/25 flex items-center gap-2 group"
                             >
                                 Download CV
