@@ -308,11 +308,18 @@ h6 {
 .light-mode .bg-\[\#020617\]\/80,
 .light-mode .bg-slate-900\/80,
 .light-mode .bg-slate-800\/50,
+.light-mode .bg-\[\#0f172a\]\/90,
 .light-mode .glass {
   background-color: var(--bg-card) !important;
   backdrop-filter: blur(12px) !important;
   border: 1px solid var(--border-color) !important;
   box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color) !important;
+}
+
+/* New Projects Title Gradient Override */
+.light-mode #works h2 span.bg-clip-text {
+  background-image: linear-gradient(to bottom, #0f172a, #334155, #64748b) !important;
+  -webkit-text-fill-color: transparent !important;
 }
 
 /* Specific Hero Gradient Override */
