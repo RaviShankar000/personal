@@ -279,7 +279,7 @@ export default function Projects() {
                     <p className="font-manrope text-sm tracking-[0.3em] text-blue-500 mb-6 uppercase animate-pulse">
                         Case Studies
                     </p>
-                    <h2 className="font-syne text-5xl lg:text-8xl font-black leading-[0.9] mb-8">
+                    <h2 className="font-syne text-[clamp(2rem,9vw,4.5rem)] md:text-6xl lg:text-8xl font-black leading-[0.9] mb-8">
                         FEATURED <br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-200 to-slate-500">PROJECTS</span>
                     </h2>
