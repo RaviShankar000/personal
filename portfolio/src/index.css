@@ -322,6 +322,78 @@ h6 {
   -webkit-text-fill-color: transparent !important;
 }
 
+/* Projects Card Light Mode Specifics */
+.light-mode #works .sticky .group {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Expanded Section Background */
+.light-mode #works .bg-black\/40 {
+  background-color: #f8fafc !important;
+  /* slate-50 */
+}
+
+/* Image Container Background */
+.light-mode #works .bg-slate-950 {
+  background-color: #f1f5f9 !important;
+  /* slate-100 */
+  border-color: var(--border-color) !important;
+}
+
+/* Text Overrides for Projects */
+.light-mode #works h3.text-slate-100,
+.light-mode #works h4.text-white {
+  color: var(--text-primary) !important;
+}
+
+.light-mode #works .text-slate-400,
+.light-mode #works .text-slate-300 {
+  color: var(--text-secondary) !important;
+}
+
+/* Tech Stack Tags */
+.light-mode #works .bg-white\/5 {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: var(--text-secondary) !important;
+}
+
+/* Buttons and Links */
+.light-mode #works button.text-white,
+.light-mode #works a.text-white {
+  color: #2563eb !important;
+  /* blue-600 */
+}
+
+.light-mode #works button.text-white:hover,
+.light-mode #works a.text-white:hover {
+  color: #1d4ed8 !important;
+  /* blue-700 */
+}
+
+/* Separators */
+.light-mode #works .bg-white\/10,
+.light-mode #works .border-white\/5,
+.light-mode #works .border-white\/10 {
+  background-color: var(--border-color) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Outcome Box */
+.light-mode #works .bg-green-900\/10 {
+  background-color: #f0fdf4 !important;
+  /* green-50 */
+  border-color: #bbf7d0 !important;
+  /* green-200 */
+}
+
+.light-mode #works .text-green-400\/90 {
+  color: #15803d !important;
+  /* green-700 */
+}
+
 /* Specific Hero Gradient Override */
 .light-mode #hero {
   background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
